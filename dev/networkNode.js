@@ -252,7 +252,11 @@ app.get('/address/:address', (req, res) => {
   const addressData = bitcoin.getAddressData(address);
   res.json({
     addressData,
-  }); 
+  });
+});
+
+app.get('/block-explorer', (req, res) => {
+  res.sendFile('./block-explorer/index.html', { root: __dirname });
 });
 
 app.listen(port, () => {

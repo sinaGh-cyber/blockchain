@@ -50,7 +50,7 @@ class Blockchain {
 
   hashBlock(prevuesBlockHash, nonce, currentBlockData) {
     const dataAsString =
-      prevuesBlockHash + nonce.tostring() + JSON.stringify(currentBlockData);
+      prevuesBlockHash + nonce.toString() + JSON.stringify(currentBlockData);
     const hash = sha256(dataAsString);
     return hash;
   }
